@@ -24,6 +24,11 @@ const items = [
     to: "/about",
     icon: QuoteIcon,
   },
+  {
+    title: "Editor",
+    to: "/editor",
+    icon: QuoteIcon,
+  },
 ];
 
 export function AppSidebar() {

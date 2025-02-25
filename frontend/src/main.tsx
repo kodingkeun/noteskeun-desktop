@@ -1,5 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import "@blocknote/mantine/style.css";
 import "./main.css";
 import App from "./App";
 import { AppProviders } from "@/context/app-providers";
