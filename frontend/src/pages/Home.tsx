@@ -1,38 +1,21 @@
-import { useState } from "react";
-import { Greet } from "../../wailsjs/go/main/App";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import AppLayout from "@/components/layouts/layout";
+
+const breadcrumbs = [
+  {
+    label: "Home",
+  },
+];
 
 function Home() {
-  const [resultText, setResultText] = useState(
-    "Please enter your name below 👇"
-  );
-  const [name, setName] = useState("");
-  const updateName = (e: any) => setName(e.target.value);
-  const updateResultText = (result: string) => setResultText(result);
-
-  function greet() {
-    Greet(name).then(updateResultText);
-  }
-
   return (
-    <div id="Home">
-      <div id="result">{resultText}</div>
-      <div id="input" className="input-box">
-        <input
-          id="name"
-          className="input w-full h-20"
-          onChange={updateName}
-          autoComplete="off"
-          name="input"
-          type="text"
-        />
-        <Button onClick={greet}>Greet</Button>
-        <Link to="/about">
-          <Button>About</Button>
-        </Link>
+    <AppLayout breadcrumbs={breadcrumbs}>
+      <div className="p-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam
+        aliquam accusamus impedit, perspiciatis similique laudantium tempore
+        voluptas quae repellendus excepturi suscipit quidem delectus
+        reprehenderit vel maxime quibusdam dicta vitae!
       </div>
-    </div>
+    </AppLayout>
   );
 }
 
